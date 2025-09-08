@@ -10,7 +10,7 @@ lerna-debug.log*
 # ------------------------
 # Angular (site/)
 site/dist
-site/.angular/cache
+site/.angular/
 site/tmp
 site/out-tsc
 site/coverage
@@ -23,8 +23,16 @@ api/.cache
 api/coverage
 api/tmp
 api/*.tsbuildinfo
-api/.env
-api/.env.*.local
+
+# ------------------------
+# Environment & secrets
+*.env
+*.env.*
+*.key
+*.pem
+*.crt
+*.p12
+*.jks
 
 # ------------------------
 # Logs
