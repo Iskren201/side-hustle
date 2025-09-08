@@ -12,12 +12,5 @@ export class UsersSeed implements OnModuleInit {
             password: 'test',
             roles: ['admin'],
         });
-
-        await this.users.ensureUser({
-            fullName: 'Deni Ivanova',
-            email: 'animadeni@gmail.com',
-            password: 'test',
-            roles: ['user'],
-        });
     }
 }
