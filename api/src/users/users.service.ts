@@ -25,4 +25,8 @@ export class UsersService {
         });
         return doc.toObject();
     }
+
+    async findByEmailWithPassword(email: string) {
+        return this.userModel.findOne({ email }).select('+passwordHash');
+    }
 }

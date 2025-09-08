@@ -1,0 +1,45 @@
+.container {
+    max-width: 420px;
+    margin: 48px auto;
+    padding: 0 16px;
+}
+
+.card {
+    background: #fff;
+    color: #111;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, .08);
+}
+
+label {
+    display: block;
+    margin: 12px 0;
+}
+
+input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+.btn {
+    margin-top: 12px;
+    padding: 10px 16px;
+    border-radius: 12px;
+    background: #111827;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+}
+
+.hint {
+    color: #6b7280;
+    margin-top: 8px;
+}
+
+.err {
+    color: #dc2626;
+    margin-top: 8px;
+}

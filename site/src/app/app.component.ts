@@ -15,7 +15,7 @@ import { Component } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { User } from './core/models/user.model';
-import { UsersService } from './core/services/sers.service';
+import { UsersService } from './core/services/users.service';
 
 @Component({
   selector: 'app-root',

@@ -1,0 +1,18 @@
+<section class="hero">
+    <div class="container">
+        <h1>Side Hustle</h1>
+        <p class="lead">NestJS + Angular + MongoDB, деплойнато (Render + Vercel).</p>
+        <a routerLink="/sign-in" class="btn">Вход</a>
+    </div>
+</section>
+
+<section class="container mt">
+    <h2>Users (test)</h2>
+    <ul *ngIf="users$ | async as users; else loading">
+        <li *ngFor="let u of users; trackBy: trackById">
+            <strong>{{ u.fullName }}</strong> — {{ u.email }} <em>[{{ u.roles.join(', ') }}]</em>
+        </li>
+        <li *ngIf="users.length === 0">Няма потребители.</li>
+    </ul>
+    <ng-template #loading>Зареждане...</ng-template>
+</section>

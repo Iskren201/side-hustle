@@ -1,0 +1,25 @@
+<section class="container">
+    <div class="card">
+        <h2>Вход</h2>
+
+        <form [formGroup]="form" (ngSubmit)="submit()">
+            <label>Email
+                <input formControlName="email" type="email" placeholder="admin@example.com">
+            </label>
+
+            <label>Парола
+                <input formControlName="password" type="password" placeholder="admin1234">
+            </label>
+
+            <button class="btn" [disabled]="form.invalid || loading">
+                {{ loading ? '...' : 'Вход' }}
+            </button>
+            <p class="hint">
+                Демо акаунти:
+                <code>admin&#64;example.com / admin1234</code>
+                или
+                <code>user&#64;example.com / user1234</code>
+            </p>
+        </form>
+    </div>
+</section>

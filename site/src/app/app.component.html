@@ -1,21 +1,6 @@
-<!-- <router-outlet></router-outlet> -->
+<nav class="nav">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+    <a routerLink="/sign-in" routerLinkActive="active">Sign in</a>
+</nav>
 
-
-<!-- Временно коментиран router-outlet; показваме списък за тест -->
-<h2>Users (test)</h2>
-
-<ul *ngIf="users$ | async as users; else loadingTpl">
-    <li *ngFor="let u of users; trackBy: trackById">
-        <strong>{{ u.fullName }}</strong>
-        <small>— {{ u.email }}</small>
-        <em> [{{ u.roles.join(', ') }}] </em>
-    </li>
-
-    <li *ngIf="users.length === 0">
-        Няма потребители (или грешка при зареждане).
-    </li>
-</ul>
-
-<ng-template #loadingTpl>
-    <p>Зареждане...</p>
-</ng-template>
+<router-outlet></router-outlet>
